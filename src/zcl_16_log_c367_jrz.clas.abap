@@ -1,0 +1,20 @@
+CLASS zcl_16_log_c367_jrz DEFINITION
+  PUBLIC
+  INHERITING FROM zcl_14_log_c367_jrz
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+    METHODS: airplane_type REDEFINITION.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_16_log_c367_jrz IMPLEMENTATION.
+  METHOD airplane_type.
+    rv_airplane_type = 'Passenger plane'.
+  ENDMETHOD.
+
+ENDCLASS.

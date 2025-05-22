@@ -1,0 +1,4 @@
+INTERFACE zif__04_log_c367_jrz
+  PUBLIC .
+
+ENDINTERFACE.

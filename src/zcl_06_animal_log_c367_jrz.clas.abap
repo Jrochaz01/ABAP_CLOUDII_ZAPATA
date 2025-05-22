@@ -1,0 +1,21 @@
+CLASS zcl_06_animal_log_c367_jrz DEFINITION
+  PUBLIC
+*  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+    METHODS:
+        walk    RETURNING VALUE(rv_walk) TYPE string.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS ZCL_06_ANIMAL_LOG_C367_JRZ IMPLEMENTATION.
+
+
+  METHOD walk.
+    rv_walk = 'The animal walks'.
+  ENDMETHOD.
+ENDCLASS.

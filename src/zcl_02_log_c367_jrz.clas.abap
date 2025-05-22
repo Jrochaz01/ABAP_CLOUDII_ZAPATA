@@ -15,13 +15,15 @@ ENDCLASS.
 
 
 
-CLASS zcl_02_log_c367_jrz IMPLEMENTATION.
+CLASS ZCL_02_LOG_C367_JRZ IMPLEMENTATION.
+
+
   METHOD get_attr.
     my_attr = me->my_attr.
   ENDMETHOD.
 
+
   METHOD set_attr.
     me->my_attr = my_attr.
   ENDMETHOD.
-
 ENDCLASS.

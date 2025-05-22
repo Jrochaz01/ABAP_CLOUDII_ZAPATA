@@ -42,22 +42,29 @@ ENDCLASS.
 
 
 
-CLASS zcl_01_log_c367_jrz IMPLEMENTATION.
-  METHOD set_attr.
-    my_attr = iv_attr.
-  ENDMETHOD.
+CLASS ZCL_01_LOG_C367_JRZ IMPLEMENTATION.
 
-  METHOD set_attr2.
-    my_attr2 = iv_attr.
-  ENDMETHOD.
 
   METHOD get_attr.
     rv_attr = my_attr.
   ENDMETHOD.
 
+
   METHOD get_attr2.
     ev_attr = my_attr2.
   ENDMETHOD.
+
+
+  METHOD get_flight.
+    SELECT SINGLE FROM /dmo/travel
+    FIELDS travel_id,
+            agency_id,
+            customer_id
+    WHERE travel_id = @iv_flight
+    INTO @rs_flight.
+
+  ENDMETHOD.
+
 
   METHOD get_flights.
 
@@ -77,14 +84,13 @@ CLASS zcl_01_log_c367_jrz IMPLEMENTATION.
 
   ENDMETHOD.
 
-  METHOD get_flight.
-    SELECT SINGLE FROM /dmo/travel
-    FIELDS travel_id,
-            agency_id,
-            customer_id
-    WHERE travel_id = @iv_flight
-    INTO @rs_flight.
 
+  METHOD set_attr.
+    my_attr = iv_attr.
   ENDMETHOD.
 
+
+  METHOD set_attr2.
+    my_attr2 = iv_attr.
+  ENDMETHOD.
 ENDCLASS.

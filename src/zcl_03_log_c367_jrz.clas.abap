@@ -16,16 +16,18 @@ ENDCLASS.
 
 
 
-CLASS zcl_03_log_c367_jrz IMPLEMENTATION.
+CLASS ZCL_03_LOG_C367_JRZ IMPLEMENTATION.
+
+
   METHOD class_constructor.
         " ESTATICO
     log = |Static constructor-->{ log }|.
 
   ENDMETHOD.
 
+
   METHOD constructor.
       " INSTNACIA
     log = |Instance constructor-->{ log }|.
   ENDMETHOD.
-
 ENDCLASS.
